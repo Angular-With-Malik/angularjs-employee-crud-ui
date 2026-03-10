@@ -12,6 +12,9 @@
   "type": "commonjs",
   "dependencies": {
     "angular": "^1.8.3",
+    "angular-animate": "^1.8.3",
+    "angular-material": "^1.2.5",
+    "angular-toastr": "^2.1.1",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1"
   }

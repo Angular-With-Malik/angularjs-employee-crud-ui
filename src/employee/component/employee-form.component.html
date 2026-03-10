@@ -1,0 +1,50 @@
+<!-- {{$ctrl.currentEmployee | json}} -->
+<div layout="column" ng-cloak class="md-inline-form">
+    <md-content md-theme="docs-dark" layout-gt-sm="column" layout-padding>
+        <div class="employee-form">
+            <md-input-container class="md-block">
+                <label>First Name</label>
+                <input ng-model=$ctrl.currentEmployee.firstName>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Last Name</label>
+                <input ng-model=$ctrl.currentEmployee.lastName>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Designation</label>
+                <input ng-model=$ctrl.currentEmployee.designation>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>City</label>
+                <input ng-model=$ctrl.currentEmployee.city>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Salary</label>
+                <input ng-model=$ctrl.currentEmployee.salary>
+            </md-input-container>
+        </div>
+    </md-content>
+
+</div>
+<md-content>
+    <!-- <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding> -->
+    <section layout="row" layout-sm="column">
+        <md-button class="md-raised md-primary w-100" ng-click="$ctrl.save()">
+            SUBMIT
+        </md-button>
+        <md-button class="md-raised w-100" ng-click="$ctrl.clear()">
+            CLEAR
+        </md-button>
+    </section>
+</md-content>
+<!-- <input class="form-control mb-3" placeholder="First Name" 
+     ng-model=$ctrl.currentEmployee.firstName> -->
+<!-- <input class="form-control mb-3" placeholder="Last Name" ng-model=$ctrl.currentEmployee.lastName> -->
+<!-- <input class="form-control mb-3" placeholder="Designation" ng-model=$ctrl.currentEmployee.designation> -->
+<!-- <input class="form-control mb-3" placeholder="City" ng-model=$ctrl.currentEmployee.city> -->
+<!-- <input class="form-control mb-3" placeholder="Salary" ng-model=$ctrl.currentEmployee.salary> -->
+<!-- </div> -->

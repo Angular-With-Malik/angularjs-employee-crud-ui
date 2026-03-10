@@ -2,6 +2,6 @@
     angular
         .module('app')
         .component('appRoot', {
-            templateUrl: 'app.component.html'
+            templateUrl: 'src/app.component.html'
         })
 })()
