@@ -14,7 +14,9 @@
                 lastName: '',
                 city: '',
                 designation: '',
-                salary: ''
+                salary: '',
+                department: '',
+                gender: ''
             }
 
             vm.setCurrentEmployee = function (employee) {

@@ -2,6 +2,14 @@
 <div layout="column" ng-cloak class="md-inline-form">
     <md-content md-theme="docs-dark" layout-gt-sm="column" layout-padding>
         <div class="employee-form">
+            <div class="gender-button">
+                <label>Gender</label>
+                <md-radio-group ng-model="$ctrl.currentEmployee.gender">
+                    <md-radio-button value="female">Female</md-radio-button>
+                    <md-radio-button value="male">Male</md-radio-button>
+                </md-radio-group>
+            </div>
+
             <md-input-container class="md-block">
                 <label>First Name</label>
                 <input ng-model=$ctrl.currentEmployee.firstName>
@@ -26,6 +34,16 @@
                 <label>Salary</label>
                 <input ng-model=$ctrl.currentEmployee.salary>
             </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Department</label>
+                <md-select ng-model=$ctrl.currentEmployee.department>
+                    <md-option value={{department.value}} ng-repeat="department in $ctrl.allDepartment">
+                        {{department.label}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
         </div>
     </md-content>
 
@@ -48,3 +66,25 @@
 <!-- <input class="form-control mb-3" placeholder="City" ng-model=$ctrl.currentEmployee.city> -->
 <!-- <input class="form-control mb-3" placeholder="Salary" ng-model=$ctrl.currentEmployee.salary> -->
 <!-- </div> -->
+
+<!-- <md-input-container>
+    <label>Department</label>
+    <md-select ng-model="department">
+        <md-option value={{department.value}} ng-repeat="department in $ctrl.allDepartment">
+            {{department.label}}
+        </md-option>
+        <md-option value="male">Male</md-option> 
+    </md-select>
+</md-input-container>
+
+{{department}} -->
+
+<!-- 
+
+{{gender}}
+
+<md-radio-group ng-model="gender">
+    <md-radio-button value="female">Female</md-radio-button>
+    <md-radio-button value="male">Male</md-radio-button>
+</md-radio-group>
+-->

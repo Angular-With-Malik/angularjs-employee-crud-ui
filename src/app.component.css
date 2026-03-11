@@ -1,3 +1,9 @@
 .employee-form md-input-container {
     margin: 0 !important;
 }
+
+.employee-form .gender-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

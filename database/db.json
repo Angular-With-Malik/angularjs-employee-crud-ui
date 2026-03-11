@@ -2,19 +2,13 @@
   "employee": [
     {
       "id": "1",
-      "firstName": "Kedar 123",
+      "firstName": "Kedar",
       "lastName": "Dev",
       "city": "Mumbai",
       "designation": "Sr. Developer",
-      "salary": "52000"
-    },
-    {
-      "id": "2",
-      "firstName": "skcn kcks",
-      "lastName": "",
-      "city": "",
-      "designation": "",
-      "salary": ""
+      "salary": "52000",
+      "department": "hr",
+      "gender": "male"
     },
     {
       "id": "3",
@@ -22,15 +16,19 @@
       "lastName": "Sharma",
       "city": "Pune",
       "designation": "Developer",
-      "salary": "12345"
+      "salary": "12345",
+      "department": "finance",
+      "gender": "male"
     },
     {
-      "id": "4",
-      "firstName": "klnml",
-      "lastName": "mkl",
-      "city": "m",
-      "designation": "lkml",
-      "salary": "ml"
+      "id": "5",
+      "firstName": "Geeta",
+      "lastName": "Sharma",
+      "city": "Manglore",
+      "designation": "Manager",
+      "salary": "26000",
+      "department": "sales",
+      "gender": "male"
     }
   ]
 }

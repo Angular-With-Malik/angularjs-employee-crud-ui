@@ -6,6 +6,11 @@
             controller: function (employeeService, toastr) {
                 const vm = this
                 vm.message = 'Employee Form'
+                vm.allDepartment = [
+                    { label: 'Sales', value: 'sales' },
+                    { label: 'Finance', value: 'finance' },
+                    { label: 'HR', value: 'hr' }
+                ]
 
                 vm.$onInit = function () {
                     console.log('Employee Form On Init ');
@@ -75,7 +80,9 @@
                         lastName: '',
                         city: '',
                         designation: '',
-                        salary: ''
+                        salary: '',
+                        department: '',
+                        gender: ''
                     }
                 }
 
