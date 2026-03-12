@@ -30,7 +30,9 @@
                 <a class="btn btn-danger" ng-click="$ctrl.deleteEmployeeById(employee.id)">
                     <i class="bi bi-archive-fill"></i>
                 </a>
-                <i class="bi bi-eye-fill"></i>
+                <a class="btn btn-info" ng-click="$ctrl.displayEmployee($event, employee)">
+                    <i class="bi bi-eye-fill"></i>
+                </a>
             </td>
         </tr>
     </tbody>

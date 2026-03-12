@@ -3,8 +3,9 @@
         .module('employee')
         .component('employeeList', {
             templateUrl: 'src/employee/component/employee-list.component.html',
-            controller: function (employeeService) {
+            controller: function (employeeService, $mdDialog) {
                 const vm = this
+                vm.title = ''
 
                 vm.employeeService = employeeService;
 
@@ -32,6 +33,21 @@
                 vm.editEmployee = function (employee) {
                     console.log('Employee to Edit ', employee);
                     employeeService.setCurrentEmployee(employee)
+                }
+
+                vm.displayEmployee = function (event, employee) {
+                    $mdDialog.show({
+                        controller: employeeDialog,
+                        templateUrl: 'src/employee/component/employee-dialog.component.html',
+                        parent: angular.element(document.body),
+                        targetEvent: event,
+                        clickOutsideToClose: true,
+                        fullscreen: false
+                    })
+                }
+
+                function employeeDialog() {
+                    vm.title = 'Employee Dialog Component'
                 }
             }
         })
