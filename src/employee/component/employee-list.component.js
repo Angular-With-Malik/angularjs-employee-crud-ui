@@ -38,16 +38,30 @@
                 vm.displayEmployee = function (event, employee) {
                     $mdDialog.show({
                         controller: employeeDialog,
+                        controllerAs: '$vm',
                         templateUrl: 'src/employee/component/employee-dialog.component.html',
                         parent: angular.element(document.body),
                         targetEvent: event,
                         clickOutsideToClose: true,
-                        fullscreen: false
+                        fullScreen: false,
+                        locals: {
+                            employee: employee
+                        }
                     })
                 }
 
-                function employeeDialog() {
-                    vm.title = 'Employee Dialog Component'
+                function employeeDialog(employee) {
+                    const vmEmployeeDialog = this
+
+                    vmEmployeeDialog.title = 'Employee Dialog Component'
+                    vmEmployeeDialog.employee = employee
+                    console.log(employee);
+
+                    vmEmployeeDialog.cancel = function () {
+                        console.log('Cancel');
+                        
+                        $mdDialog.hide();
+                    };
                 }
             }
         })

@@ -1,3 +1,47 @@
-Hi
+<!-- Hi
 
-{{title}}
+{{$vm.employee}}
+{{$vm.title}} -->
+
+<md-dialog aria-label="Mango (Fruit)" style="width: 60%;">
+    <md-toolbar style="display: flex; align-items: center; justify-content: center;">
+        Employee Details
+    </md-toolbar>
+    <md-dialog-content class="p-4">
+        <table class="table">
+            <tr>
+                <th>Gender</th>
+                <td>{{$vm.employee.gender}}</td>
+            </tr>
+            <tr>
+                <th>First Name</th>
+                <td>{{$vm.employee.firstName}}</td>
+            </tr>
+            <tr>
+                <th>Last Name</th>
+                <td>{{$vm.employee.lastName}}</td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td>{{$vm.employee.city}}</td>
+            </tr>
+            <tr>
+                <th>Designation</th>
+                <td>{{$vm.employee.designation}}</td>
+            </tr>
+            <tr>
+                <th>Department</th>
+                <td>{{$vm.employee.department}}</td>
+            </tr>
+            <tr>
+                <th>Salary</th>
+                <td>{{$vm.employee.salary}}</td>
+            </tr>
+        </table>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+        <md-button ng-click="$vm.cancel()" class="md-primary">
+            Cancel
+        </md-button>
+    </md-dialog-actions>
+</md-dialog>
