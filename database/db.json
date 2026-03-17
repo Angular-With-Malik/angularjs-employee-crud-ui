@@ -11,24 +11,24 @@
       "gender": "male"
     },
     {
-      "id": "3",
-      "firstName": "Rajesh",
-      "lastName": "Sharma",
-      "city": "Pune",
-      "designation": "Developer",
-      "salary": "12345",
-      "department": "finance",
-      "gender": "male"
+      "id": "2",
+      "firstName": "Ramesh",
+      "lastName": "",
+      "city": "",
+      "designation": "",
+      "salary": "",
+      "department": "",
+      "gender": "female"
     },
     {
-      "id": "5",
-      "firstName": "Geeta",
-      "lastName": "Sharma",
-      "city": "Manglore",
-      "designation": "Manager",
-      "salary": "26000",
-      "department": "sales",
-      "gender": "male"
+      "id": "3",
+      "firstName": "AA",
+      "lastName": "",
+      "city": "",
+      "designation": "",
+      "salary": "",
+      "department": "",
+      "gender": "female"
     }
   ]
 }

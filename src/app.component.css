@@ -7,3 +7,12 @@
     align-items: center;
     justify-content: space-between;
 }
+
+@media (min-width: 960px) {
+    md-toast.md-left {
+        width: 100px;
+        right: 0 !important;
+        top: 0 !important;
+        left: auto !important;
+    }
+}

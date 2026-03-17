@@ -52,5 +52,18 @@
             vm.updateEmployee = function (employee) {
                 return $http.put(BASE_URL + '/' + employee.id, employee)
             }
+
+            vm.showNotification = function ($mdToast, message) {
+                $mdToast.show(
+                    $mdToast.simple()
+                        .textContent(message)
+                        .hideDelay(2500)                    
+                    )
+                    .then(function () {
+                        console.log('Toast dismissed.');
+                    }).catch(function () {
+                        console.log('Toast failed or was forced to close early by another toast.');
+                    })
+            }
         })
 })();

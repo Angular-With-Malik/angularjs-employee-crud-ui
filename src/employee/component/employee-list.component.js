@@ -3,7 +3,7 @@
         .module('employee')
         .component('employeeList', {
             templateUrl: 'src/employee/component/employee-list.component.html',
-            controller: function (employeeService, $mdDialog) {
+            controller: function (employeeService, $mdDialog, $mdToast) {
                 const vm = this
                 vm.title = ''
 
@@ -21,6 +21,7 @@
                             console.log(response);
                             if (response.status === 200) {
                                 employeeService._getAllEmployee()
+                                employeeService.showNotification($mdToast, 'Employee Deleted Successfully !')
                             } else {
                                 console.error('Employee Not Found');
                             }

@@ -3,7 +3,7 @@
         .module('employee')
         .component('employeeForm', {
             templateUrl: 'src/employee/component/employee-form.component.html',
-            controller: function (employeeService, toastr) {
+            controller: function (employeeService, $mdToast) {
                 const vm = this
                 vm.message = 'Employee Form'
                 vm.allDepartment = [
@@ -14,9 +14,6 @@
 
                 vm.$onInit = function () {
                     console.log('Employee Form On Init ');
-                    setTimeout(() => {
-                        toastr.success('Employee Created Successfully', 'Employee CRUD Application')
-                    }, 1000);
                 }
 
                 vm.$doCheck = function () {
@@ -43,7 +40,7 @@
                             if (response.status === 201) {
                                 employeeService._getAllEmployee()
                                 vm.clear()
-                                toastr.success('Employee Created Successfully', 'Employee CRUD Application')
+                                employeeService.showNotification($mdToast, 'Employee Created Successfully !')
                             }
                         }).catch(function (error) {
                             console.error('Error while creating employee', error)
