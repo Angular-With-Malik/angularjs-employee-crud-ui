@@ -89,6 +89,7 @@
                             if (response.status === 200) {
                                 employeeService._getAllEmployee()
                                 vm.clear()
+                                 employeeService.showNotification($mdToast, 'Employee Updated Successfully !')
                             }
                         }).catch(function (error) {
                             console.error('Error while updating employee', error)
